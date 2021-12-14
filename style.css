@@ -1,0 +1,86 @@
+/**
+ * Theme Name: Star Travel Guide
+ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+.header {
+    grid-area: header;
+    position: relative;
+    text-align: center;
+    color: #FFF;
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.9em;
+}
+
+.parallax {
+    background-image: url("assets/images/stars-wallpaper.jpg");
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    grid-area: main;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.intro-text {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.column {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.footer { 
+    grid-area: footer; 
+}
+
+@media (min-width: 540px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+    
+    .column {
+        grid-column: span 4;
+    }
+}
